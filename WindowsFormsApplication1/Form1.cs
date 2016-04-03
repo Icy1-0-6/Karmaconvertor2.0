@@ -118,8 +118,8 @@ namespace KarmaConvertor
                 //Set status:
                 statusindicator = 3;
 
-                //Open Forge(click 1st bag slot)
-                Cursor.Position = new Point((r.Next(1525, 1541)), (r.Next(124, 147)));
+                //Open Forge kit(click 2nd bag slot)
+                Cursor.Position = new Point((r.Next(1573, 1603)), (r.Next(125, 149)));
                 System.Threading.Thread.Sleep(r.Next(50, 75));
                 mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
                 System.Threading.Thread.Sleep(r.Next(25, 50));
@@ -181,8 +181,9 @@ namespace KarmaConvertor
                     System.Threading.Thread.Sleep(r.Next(1703, 1852));
                 }
 
-                //Open Salvage kit(click 2nd bag slot)
-                Cursor.Position = new Point((r.Next(1573, 1603)), (r.Next(125, 149)));
+                
+                //Open Salvage kit(click 1st bag slot)
+                Cursor.Position = new Point((r.Next(1525, 1541)), (r.Next(124, 147)));
                 System.Threading.Thread.Sleep(r.Next(50, 75));
                 mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
                 System.Threading.Thread.Sleep(r.Next(25, 50));
