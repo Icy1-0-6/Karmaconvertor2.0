@@ -293,9 +293,9 @@ namespace KarmaConvertor
         // TEST MOVING THE WINDOW //
         private void testTimer1_Tick(object sender, EventArgs e)
         {
-            //if (isPressed(Keys.F7))
-            //{
-            //    Random r = new Random();
+            if (isPressed(Keys.F7))
+            {
+                //    Random r = new Random();
                 //Move the window to posision X/Y (BAG)  (WORKS)
                 //mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
                 //Cursor.Position = new Point(1524, 6);
@@ -303,10 +303,10 @@ namespace KarmaConvertor
                 //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 
                 //Move the window to posision X/Y (Vendor)  (WORKS)
-                //mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-                //Cursor.Position = new Point(553, 12);
-                //System.Threading.Thread.Sleep(125);
-                //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                Cursor.Position = new Point(553, 12);
+                System.Threading.Thread.Sleep(125);
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 
                 //Open inventory(WORKS)
                 //Cursor.Position = new Point((r.Next(105, 118)), (r.Next(10, 24)));
@@ -345,7 +345,7 @@ namespace KarmaConvertor
                 //this.Close();
 
             }
-        
+        }
 
         private void Realforge_Tick(object sender, EventArgs e)
         {
