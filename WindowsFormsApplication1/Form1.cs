@@ -23,7 +23,7 @@ namespace KarmaConvertor
      * - Make it automatically set the forge, merchant and bag in right posisions.
      */
 
-    public partial class Form1 : Form
+    public partial class KarmaConvertor : Form
     {
         private BackgroundWorker bw = new BackgroundWorker();
 
@@ -42,7 +42,7 @@ namespace KarmaConvertor
         [DllImport("user32.dll")]
         static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
 
-        public Form1()
+        public KarmaConvertor()
         {
             InitializeComponent();
         }
@@ -227,7 +227,7 @@ namespace KarmaConvertor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(forgesession.ToString());
+            MessageBox.Show("You are able to buy " + forgesession.ToString() + " forge sets of 4");
         }
 
         private void label1_Click(object sender, EventArgs e)

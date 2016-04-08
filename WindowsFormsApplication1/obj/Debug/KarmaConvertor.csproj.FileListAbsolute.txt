@@ -27,6 +27,6 @@ C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\WindowsFormsApplication1\
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.csprojResolveAssemblyReference.cache
-C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.Form1.resources
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.csproj.GenerateResource.Cache
+C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.KarmaConvertor.resources

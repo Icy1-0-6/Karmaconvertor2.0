@@ -1,6 +1,6 @@
 ﻿namespace KarmaConvertor
 {
-    partial class Form1
+    partial class KarmaConvertor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KarmaConvertor));
             this.Forge = new System.Windows.Forms.Timer(this.components);
             this.Realforge = new System.Windows.Forms.Timer(this.components);
             this.testTimer1 = new System.Windows.Forms.Timer(this.components);
@@ -40,6 +41,7 @@
             this.MouseTrackTimer = new System.Windows.Forms.Timer(this.components);
             this.Status = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Forge
@@ -56,6 +58,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(12, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(65, 20);
@@ -64,8 +68,10 @@
             // lblXas
             // 
             this.lblXas.AutoSize = true;
+            this.lblXas.BackColor = System.Drawing.Color.Black;
             this.lblXas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXas.Location = new System.Drawing.Point(25, 102);
+            this.lblXas.ForeColor = System.Drawing.Color.White;
+            this.lblXas.Location = new System.Drawing.Point(12, 212);
             this.lblXas.Name = "lblXas";
             this.lblXas.Size = new System.Drawing.Size(52, 20);
             this.lblXas.TabIndex = 2;
@@ -73,42 +79,46 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(83, 29);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 41);
             this.button1.TabIndex = 3;
             this.button1.Text = "Set PackCount";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(197, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 60);
             this.button2.TabIndex = 4;
             this.button2.Text = "Return PackCount value";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblYas
             // 
             this.lblYas.AutoSize = true;
+            this.lblYas.BackColor = System.Drawing.Color.Black;
             this.lblYas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYas.Location = new System.Drawing.Point(25, 122);
+            this.lblYas.ForeColor = System.Drawing.Color.White;
+            this.lblYas.Location = new System.Drawing.Point(12, 232);
             this.lblYas.Name = "lblYas";
             this.lblYas.Size = new System.Drawing.Size(52, 20);
             this.lblYas.TabIndex = 5;
             this.lblYas.Text = "lblYas";
             // 
-            // MouseTrackTimer
-            // 
-           
-            // 
             // Status
             // 
             this.Status.AutoSize = true;
-            this.Status.Location = new System.Drawing.Point(29, 181);
+            this.Status.BackColor = System.Drawing.Color.Black;
+            this.Status.ForeColor = System.Drawing.Color.White;
+            this.Status.Location = new System.Drawing.Point(13, 159);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(128, 13);
             this.Status.TabIndex = 6;
@@ -121,19 +131,36 @@
             this.backgroundWorker1.WorkerSupportsCancellation = true;
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(8, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Cursor Posision:";
+            // 
+            // KarmaConvertor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.lblYas);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblXas);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "KarmaConvertor";
+            this.Text = "KarmaConvert Bot V0.6";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,6 +180,7 @@
         private System.Windows.Forms.Timer MouseTrackTimer;
         private System.Windows.Forms.Label Status;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
