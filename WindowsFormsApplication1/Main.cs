@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 
+
 namespace KarmaConvertor
 {
     
@@ -33,6 +34,16 @@ namespace KarmaConvertor
         double forgesession;
         //_________________________________________________________________
 
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Status.ForeColor = System.Drawing.Color.Green;
+            Status.Text = "Currently: Pending";
+            Forge.Enabled = true;
+            Realforge.Enabled = true;
+            testTimer1.Enabled = true;
+            MouseTrackTimer.Enabled = true;
+        }
 
 
         [DllImport("user32.dll")]
@@ -60,6 +71,7 @@ namespace KarmaConvertor
         {
             return Convert.ToBoolean(GetAsyncKeyState(vKey));
         }
+
 
         
         // the magic that makes it all happen
@@ -198,29 +210,40 @@ namespace KarmaConvertor
 
             }
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        
+       // popup button for move info n stuff
+        private void Infobutton_Click(object sender, EventArgs e)
         {
-            Status.ForeColor = System.Drawing.Color.Green;
-            Status.Text = "Currently: Pending";
-            Forge.Enabled = true;
-            Realforge.Enabled = true;
-            testTimer1.Enabled = true;
-            MouseTrackTimer.Enabled = true;
+            Popup popup = new Popup();        // your popup form we just created
+            popup.Show();
         }
+
+
+
 
 
        // TEST AREA //
         public void button1_Click(object sender, EventArgs e)
         {
-            double Value1 = float.Parse(textBox1.Text);
-            double divideby = 4;
-            double Calcstuff = Value1 / divideby;
-            double Rounded1 = Math.Floor(Calcstuff);
-            this.buysession = Rounded1 * 4;
-            this.forgesession = buysession / 4;
-            { 
-                lblXas.Text = "you can get " + Rounded1.ToString() +" sets";
+            try
+            {
+                double Value1 = float.Parse(textBox1.Text);
+                double divideby = 4;
+                double Calcstuff = Value1 / divideby;
+                double Rounded1 = Math.Floor(Calcstuff);
+                this.buysession = Rounded1 * 4;
+                this.forgesession = buysession / 4;
+                {
+                    lblXas.Text = "you can get " + Rounded1.ToString() + " sets";
+                }
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("Please lower the value since you exceeded the max possible!");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please remove any symbol other then numbers!");
             }
             
         }
@@ -296,17 +319,32 @@ namespace KarmaConvertor
             if (isPressed(Keys.F7))
             {
                 //    Random r = new Random();
-                //Move the window to posision X/Y (BAG)  (WORKS)
-                //mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-                //Cursor.Position = new Point(1524, 6);
-                //System.Threading.Thread.Sleep(125);
-                //mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 
-                //Move the window to posision X/Y (Vendor)  (WORKS)
-                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-                Cursor.Position = new Point(553, 12);
-                System.Threading.Thread.Sleep(125);
-                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                if (radioButtonBag.Checked == true)
+                {
+                    //Move the window to posision X/Y (BAG)  (WORKS)
+                    mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                    Cursor.Position = new Point(1524, 6);
+                    System.Threading.Thread.Sleep(125);
+                    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                }
+
+                if(radioButtonVendor.Checked == true )
+                {
+                    //Move the window to posision X/Y (Vendor)  (WORKS)
+                    mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                    Cursor.Position = new Point(553, 12);
+                    System.Threading.Thread.Sleep(125);
+                    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                }
+
+                if (radioButtonForge.Checked == true)
+                {
+                    mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                    Cursor.Position = new Point(602, 168);
+                    System.Threading.Thread.Sleep(125);
+                    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+                }
 
                 //Open inventory(WORKS)
                 //Cursor.Position = new Point((r.Next(105, 118)), (r.Next(10, 24)));
@@ -397,6 +435,15 @@ namespace KarmaConvertor
             //}
 
         }
+
+
+        // lazy close button
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
 
 
 

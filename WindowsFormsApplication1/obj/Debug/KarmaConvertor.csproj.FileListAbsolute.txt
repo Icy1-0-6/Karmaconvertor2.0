@@ -30,3 +30,4 @@ C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\Windows
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.csproj.GenerateResource.Cache
 C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.KarmaConvertor.resources
+C:\Users\Ivo_PC\Documents\Visual Studio 2012\GIT Stuff\Karmaconvertor2.0\WindowsFormsApplication1\obj\Debug\KarmaConvertor.Popup.resources
